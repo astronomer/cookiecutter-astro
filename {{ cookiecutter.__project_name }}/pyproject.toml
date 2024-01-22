@@ -1,0 +1,15 @@
+[tool.black]
+line-length = 110
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
+
+[tool.ruff]
+line-length = 110
+extend-select = [
+    "I", # isort
+]
+ignore = [
+    "E501", # line too long
+]

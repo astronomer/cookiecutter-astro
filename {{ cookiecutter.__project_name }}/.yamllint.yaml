@@ -1,0 +1,12 @@
+# Documentation: https://yamllint.readthedocs.io/en/stable/configuration.html
+extends: default
+
+rules:
+  document-start: disable  # Don't require "---" to start a YAML file
+  truthy:
+    ignore:
+      - ".github/workflows/*"  # Too many false positives in GitHub Actions files
+  line-length:
+    max: 110
+    ignore:
+      - ".github/workflows/template-project-update.yaml"

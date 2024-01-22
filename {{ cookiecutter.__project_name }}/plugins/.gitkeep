@@ -1,0 +1,1 @@
+# This file ensures the /plugins folder exists in Git, because you cannot commit empty folders.

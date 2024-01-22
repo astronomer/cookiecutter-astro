@@ -1,0 +1,1 @@
+# This file ensures the /include folder exists in Git, because you cannot commit empty folders.

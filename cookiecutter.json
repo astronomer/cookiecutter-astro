@@ -1,0 +1,10 @@
+{
+  "team_name": "X",
+  "__project_name": "astro_team_{{ cookiecutter.team_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "__project_description": "This Astro project contains Airflow code for team {{ cookiecutter.team_name | title }}.",
+  "_copy_without_render": [
+    "dags",
+    "tests",
+    ".github"
+  ]
+}

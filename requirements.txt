@@ -1,0 +1,4 @@
+cookiecutter
+pre-commit
+pytest
+pytest-cookies

@@ -1,0 +1,28 @@
+name: Validate Cookiecutter template
+
+on: push
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.0
+
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Astro CLI
+        run: curl -sSL install.astronomer.io | sudo bash -s
+
+      - name: Run tests
+        run: pytest tests/
+
+      - name: Run pre-commit in generated project
+        run: ./run_precommit_on_generated_project.sh
+        shell: bash
